@@ -139,3 +139,19 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+#product_title{
+  text-align: center;
+}
+
+#logo{
+  width: 300px;
+}
+#login{
+  width: 300px;
+  text-align: center;
+}
+#l1,#l2{
+  float: left;
+
+}
