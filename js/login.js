@@ -1,15 +1,16 @@
 function check() {
     var usrName = document.getElementById('emaillogin').value;
     var usrPw = document.getElementById('pass').value;
+    
 
     let stored_users = JSON.parse(localStorage.getItem('users'))
     if(stored_users) {
         for (let u = 0; u < stored_users.length; u++){
             if (usrName == stored_users[u].name && usrPw == stored_users[u].password) {
-                alert('Bienvenido ' + usrName);
+                alert('Bienvenido ' + usrName);  
+                localStorage.setItem('loggedUser', usrName);                                              
                 return location.replace("./mainpage.html");
-
-             }
+            }
         }
     } else {
         localStorage.setItem('users', '[]');
@@ -17,6 +18,7 @@ function check() {
 
     return alert('Acceso denegado. Se requieren mail y password válidos ');
 }
+
 function store() {
     var usrName = document.getElementById('nuevomail').value;
     var usrPw = document.getElementById('nuevopassword').value;

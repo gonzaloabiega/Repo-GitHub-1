@@ -3,9 +3,11 @@
 <html lang="en">
 
 <head>
+  <!--<script>localStorage.setItem('loggedUser', "Usuario");</script> /para mostrar "Usuario" si vuelve atras/-->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <title>eMercado - Todo lo que busques está aquí</title>
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -34,6 +36,22 @@
   </style>
 </head>
 <body>
+  <nav hidden class=" barranav site-header sticky-top py-1 bg-dark">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">      
+      <a class="py-2 d-none d-md-inline-block" href="mainpage.html">Inicio</a>
+      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <div class="usmenu">
+        <button class="despliegue py-2 d-none d-md-inline-block" id="userlog"><i id="userloga">Usuario</i><i id="dwnarrow" class="iconify" data-icon="ion:caret-down" data-inline="false"></i>
+        </button>
+        <div class="contenidous">
+          <a href="index.html">Cerrar Sesión</a>
+        </div>
+      </div>        
+    </div>
+  </nav>
   <div class=container id=login>
     <div id=loginbox>
       <img id=logo src=img/login.png>
