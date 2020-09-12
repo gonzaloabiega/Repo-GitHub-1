@@ -48,5 +48,5 @@ var getJSONData = function(url){
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
   var usuarioLogeado = document.getElementById('userloga');
-  usuarioLogeado.innerHTML = localStorage.getItem('loggedUser');
+  usuarioLogeado.innerHTML = localStorage.getItem('loggedUser').split("@",1);
 });

@@ -199,7 +199,7 @@ a.custom-card:hover {
 
 /* Add a red background color to navbar links on hover */
 .barranav a:hover, .usmenu:hover .despliegue {
-  background-color: red;
+  background-color:red;
 }
 
 /* Dropdown content (hidden by default) */
@@ -232,3 +232,44 @@ a.custom-card:hover {
   display: block;
   position: relative;
 }
+
+/* Todos los formatos que tienen que ver con label y form */
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+#form p {
+  text-align: center;
+}
+
+#form label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: rgb(8, 8, 8);
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+
+#prodrel{
+  text-align: center;
+}
+/* HASTA ACÁ Todos los formatos que tienen que ver con label y form */
+
