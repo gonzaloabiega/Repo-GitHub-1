@@ -52,7 +52,7 @@ function exit(){
 document.addEventListener("DOMContentLoaded", function(e){
   var usuarioLogeado = document.getElementById('userloga');
   usuarioLogeado.innerHTML = localStorage.getItem('loggedUser').split("@",1);
-  if (localStorage.getItem('loggedUser')==="Usuario" && window.location.pathname!="/C:/Users/Gonzalo/Desktop/Repo%20GitHub/Repo-GitHub-1/index.html"){
+  /*if (localStorage.getItem('loggedUser')==="Usuario" && window.location.pathname!="/C:/Users/Gonzalo/Desktop/Repo%20GitHub/Repo-GitHub-1/index.html"){
     return location.replace("./index.html");
-  }
+  }*/
 });
