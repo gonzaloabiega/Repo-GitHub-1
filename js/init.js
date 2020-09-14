@@ -40,6 +40,9 @@ var getJSONData = function(url){
     });
 }
 
+function exit(){
+  localStorage.setItem('loggedUser', "Usuario");
+}
  
 
 
