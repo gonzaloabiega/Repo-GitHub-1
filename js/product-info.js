@@ -1,19 +1,37 @@
 function showImagesGallery(array){
 
     let htmlContentToAppend = "";
+    let htmlCarrusel ="";
+    htmlContentToAppend +=`
+    <div class="carousel-item active">
+        <img src="img/prod1.jpg" class="d-block w-100" alt="...">
+    </div>
+    `
+    htmlCarrusel +=` 
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div id="innercarrusel" class="carousel-inner">
+        </div>        
+    </div>
+    `
+    document.getElementById("productImagesWrapper").innerHTML = htmlCarrusel;
 
-    for(let i = 0; i < array.length; i++){
+    for(let i = 1; i < array.length; i++){
         let imageSrc = array[i];
 
         htmlContentToAppend += `
-        <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
-            </div>
+        <div class="carousel-item">
+            <img src="` + imageSrc + `" class="d-block w-100" alt="...">
         </div>
         `
 
-        document.getElementById("productImagesWrapper").innerHTML = htmlContentToAppend;
+        document.getElementById("innercarrusel").innerHTML = htmlContentToAppend;
     }
 }
 
@@ -109,10 +127,11 @@ document.addEventListener("DOMContentLoaded", function(e){
                 let tempProd = products[proIndex];
                 htmlRelProd += `
                 <div class="card" style="width: 18rem;">
-                    <img src="${tempProd.imgSrc}" class="card-img-top" alt="...">
-                    <h5 class="car-title" id="prodrel">${tempProd.name}<h5/>
-                        
-                    
+                    <div class="card-body">
+                        <a href="products.html"><img src="${tempProd.imgSrc}" class="card-img-top" alt="..."></a>
+                        <h5 class="car-title"><b>${tempProd.name}</b><h5/>
+                        <p class="card-text"> ${tempProd.description}<p/>                        
+                    </div>    
                 </div> `
                         
             });       
@@ -126,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function(e){
                        
         } 
         
-    });             
+    });    
     
 
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function (resultObj) {

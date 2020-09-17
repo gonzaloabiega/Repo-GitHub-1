@@ -271,5 +271,13 @@ input[type="radio"]:checked ~ label {
 #prodrel{
   text-align: center;
 }
+.carousel {
+  width:640px;
+  height:360px;
+}
+.carCont{
+  width: 450px;
+  
+}
 /* HASTA ACÁ Todos los formatos que tienen que ver con label y form */
 
