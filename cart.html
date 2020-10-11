@@ -52,13 +52,81 @@
       </div>        
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <div class="container">
+    <div class="text-center p-4">
+        <h2>Mi Carrito</h2>
+        <p class="lead">Verifique los datos de su compra</p>
     </div>
+    <table id ="tablacarrito" class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Costo</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Subtotal</th>
+        </tr>
+      </thead>
+      
+      <tbody id="articlesWrapper">
+      </tbody>
+    </table>
+    
+    <h5 class="mb-3">Tipo de envío</h5>
+    <div class="d-block my-3">
+      <div class="custom-control custom-radio">
+        <input id="premium" value="0.15" name="publicationType" type="radio" class="custom-control-input" checked="" required="">
+        <label class="custom-control-label" for="premium">Premium 2 a 5 días (15%)</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input id="express" value="0.08" name="publicationType" type="radio" class="custom-control-input" required="">
+        <label class="custom-control-label" for="express">Express 5 a 8 días (8%)</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input id="standard" value="0.05" name="publicationType" type="radio" class="custom-control-input" required="">
+        <label class="custom-control-label" for="standard">Standard 12 a 15 días (5%)</label>
+      </div>
+    </div>
+    <hr class="mb-4">
+    <h4 class="mb-3">Dirección de envío</h4>
+    <form class="needs-validation" id="sell-info">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label for="calle">Calle</label>
+          <input type="text" class="form-control" id="calle" placeholder="" value="" >
+          <label for="numcalle">Número</label>
+          <input type="text" class="form-control" id="numcalle" placeholder="" value="" >
+          <label for="esq">Esquina</label>
+          <input type="text" class="form-control" id="esq" placeholder="" value="" >
+        </div>
+      </div>
+    </form>
+    <hr class="mb-4">
+
+    <h4 class="mb-3">Costos</h4>
+    <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Subtotal</h6>
+            <small class="text-muted">Costo unitario del producto por cantidad</small>
+          </div>
+          <span class="text-muted" id="productCostText">-</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Costo de envío</h6>
+            <small class="text-muted">Según el tipo de envío</small>
+          </div>
+          <span class="text-muted" id="comissionText">-</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Total ($)</span>
+          <strong id="totalCostText">-</strong>
+        </li>
+      </ul>
+    <hr class="mb-4">
+    <button class="btn btn-primary btn-lg" type="submit">Finalizar compra</button>
+
   </div>
   <div id="spinner-wrapper">
     <div class="lds-ring">

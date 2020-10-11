@@ -279,5 +279,8 @@ input[type="radio"]:checked ~ label {
   width: 450px;
   
 }
+.cant_cart{
+  width: 70px;
+}
 /* HASTA ACÁ Todos los formatos que tienen que ver con label y form */
 
