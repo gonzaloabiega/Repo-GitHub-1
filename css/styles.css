@@ -282,5 +282,11 @@ input[type="radio"]:checked ~ label {
 .cant_cart{
   width: 70px;
 }
+#formularioCredito {
+ display: none;
+}
+#transBanco {
+ display: none;
+}
 /* HASTA ACÁ Todos los formatos que tienen que ver con label y form */
 
