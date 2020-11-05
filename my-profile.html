@@ -52,13 +52,29 @@
       </div>        
     </div>
   </nav>
+  <div class="text-center p-4">
+    <h2>Mi Perfil</h2>
+    <p class="lead">Recuerde estos datos son importantes para realizar la compra</p>
+  </div>
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
+    <form class="needs-validation" id="formPerfil">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label for="profNombre">Nombre*</label>
+          <input type="text" class="form-control" id="profNombre" placeholder="" required>
+          <label for="profApellido">Apellido*</label>
+          <input type="text" class="form-control" id="profApellido" placeholder="" required>
+          <label for="profEdad">Edad*</label>
+          <input type="text" class="form-control" id="profEdad" placeholder="" required>
+          <label for="profEmail">E-mail*</label>
+          <input type="text" class="form-control" id="profEmail" placeholder="" required>
+          <label for="profTel">Teléfono de contacto</label>
+          <input type="text" class="form-control" id="profTel" placeholder="">
+        </div>
+      </div>
+    </form>
+    <button id="editProfButton" class="btn btn-primary btn-lg" type="submit">Editar Perfil</button>
+    <button id="saveProfButton" class="btn btn-primary btn-lg" type="submit">Guardar Cambios</button>
   </div>
   <footer class="text-muted bg-light">
     <div class="container">

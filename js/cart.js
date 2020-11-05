@@ -102,12 +102,12 @@ function subTotales() {//Genera evento en caso de cambio de Cantidades realizar 
 function alerta(){//Revisa que todos los campos required esten completos, de ser así o no devolverá un mensaje determinado
     document.getElementById("finCompra").onclick = function() {
         let allAreFilled = true;
-        document.getElementById("formularioPrincipal").querySelectorAll("[required]").forEach(function(i) {
+        document.getElementById("formPerfil").querySelectorAll("[required]").forEach(function(i) {
           if (!allAreFilled) return;
           if (!i.value) allAreFilled = false;
           if (i.type === "radio") {
             let radioValueCheck = false;
-            document.getElementById("formularioPrincipal").querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
+            document.getElementById("formPerfil").querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
               if (r.checked) radioValueCheck = true;
             })
             allAreFilled = radioValueCheck;
